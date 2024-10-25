@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World - I am pulling image now'
+                git branch: 'master', url: 'https://github.com/manindersinghdhote/snake-app.git'
+            }
+        }
+    }
+}
